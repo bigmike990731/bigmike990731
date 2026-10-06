@@ -1,0 +1,10 @@
+services:
+  browser-mcp:
+    build: .
+    container_name: browser-mcp
+    restart: unless-stopped
+    ports:
+      - "8932:8932"
+    environment:
+      - BROWSER_API_KEY=${BROWSER_API_KEY}
+    mem_limit: 1500m
